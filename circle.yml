@@ -6,6 +6,7 @@ deployment:
     branch: master
     codedeploy:
       themuse-staging:
+        minimum_healthy_hosts: 0
         application_root: /
         region: us-east-1
         revision_location:
