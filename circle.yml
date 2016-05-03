@@ -7,7 +7,6 @@ deployment:
     codedeploy:
       my-app:
         application_root: /
-        minimum_healthy_hosts: 0
         revision_location:
           revision_type: S3
           s3_location:
