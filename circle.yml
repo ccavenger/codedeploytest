@@ -15,3 +15,18 @@ deployment:
             bucket: tm-codedeploy
             key_pattern: circleci-demo-app-master
         deployment_group: themuse-staging
+
+deployment:
+  staging:
+    branch: master
+    codedeploy:
+      my-app:
+        application_root: /
+        minimum_healthy_hosts: 0
+        revision_location:
+          revision_type: S3
+          s3_location:
+            bucket: tm-codedeploy
+            key_pattern: circleci-demo-app-master
+        region: us-east-1
+        deployment_group: themuse-staging
